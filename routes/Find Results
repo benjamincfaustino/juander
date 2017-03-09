@@ -1,0 +1,153 @@
+Searching 5969 files for "public function auth"
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Auth/Access/Gate.php:
+  213       * @throws \Illuminate\Auth\Access\AuthorizationException
+  214       */
+  215:     public function authorize($ability, $arguments = [])
+  216      {
+  217          $result = $this->raw($ability, $arguments);
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Auth/GuardHelpers.php:
+   31       * @throws \Illuminate\Auth\AuthenticationException
+   32       */
+   33:     public function authenticate()
+   34      {
+   35          if (! is_null($user = $this->user())) {
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastController.php:
+   15       * @return \Illuminate\Http\Response
+   16       */
+   17:     public function authenticate(Request $request)
+   18      {
+   19          return Broadcast::auth($request);
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/LogBroadcaster.php:
+   28       * {@inheritdoc}
+   29       */
+   30:     public function auth($request)
+   31      {
+   32          //
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/NullBroadcaster.php:
+    8       * {@inheritdoc}
+    9       */
+   10:     public function auth($request)
+   11      {
+   12          //
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/PusherBroadcaster.php:
+   35       * @return mixed
+   36       */
+   37:     public function auth($request)
+   38      {
+   39          if (Str::startsWith($request->channel_name, ['private-', 'presence-']) &&
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Broadcasting/Broadcasters/RedisBroadcaster.php:
+   43       * @return mixed
+   44       */
+   45:     public function auth($request)
+   46      {
+   47          if (Str::startsWith($request->channel_name, ['private-', 'presence-']) &&
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Contracts/Auth/Access/Gate.php:
+   83       * @throws \Illuminate\Auth\Access\AuthorizationException
+   84       */
+   85:     public function authorize($ability, $arguments = []);
+   86  
+   87      /**
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Contracts/Broadcasting/Broadcaster.php:
+   11       * @return mixed
+   12       */
+   13:     public function auth($request);
+   14  
+   15      /**
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Foundation/Auth/Access/AuthorizesRequests.php:
+   16       * @throws \Illuminate\Auth\Access\AuthorizationException
+   17       */
+   18:     public function authorize($ability, $arguments = [])
+   19      {
+   20          list($ability, $arguments) = $this->parseAbilityAndArguments($ability, $arguments);
+   ..
+   33       * @throws \Illuminate\Auth\Access\AuthorizationException
+   34       */
+   35:     public function authorizeForUser($user, $ability, $arguments = [])
+   36      {
+   37          list($ability, $arguments) = $this->parseAbilityAndArguments($ability, $arguments);
+   ..
+   80       * @return void
+   81       */
+   82:     public function authorizeResource($model, $parameter = null, array $options = [], $request = null)
+   83      {
+   84          $parameter = $parameter ?: strtolower(class_basename($model));
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Foundation/Console/stubs/request.stub:
+   12       * @return bool
+   13       */
+   14:     public function authorize()
+   15      {
+   16          return false;
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Routing/Router.php:
+  992       * @return void
+  993       */
+  994:     public function auth()
+  995      {
+  996          // Authentication Routes...
+
+/Users/miyens/Development/juander/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/CramMd5Authenticator.php:
+   35       * @return bool
+   36       */
+   37:     public function authenticate(Swift_Transport_SmtpAgent $agent, $username, $password)
+   38      {
+   39          try {
+
+/Users/miyens/Development/juander/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/LoginAuthenticator.php:
+   35       * @return bool
+   36       */
+   37:     public function authenticate(Swift_Transport_SmtpAgent $agent, $username, $password)
+   38      {
+   39          try {
+
+/Users/miyens/Development/juander/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/NTLMAuthenticator.php:
+   40       * @return bool
+   41       */
+   42:     public function authenticate(Swift_Transport_SmtpAgent $agent, $username, $password)
+   43      {
+   44          if (!function_exists('openssl_random_pseudo_bytes') || !function_exists('openssl_encrypt')) {
+
+/Users/miyens/Development/juander/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/PlainAuthenticator.php:
+   35       * @return bool
+   36       */
+   37:     public function authenticate(Swift_Transport_SmtpAgent $agent, $username, $password)
+   38      {
+   39          try {
+
+/Users/miyens/Development/juander/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php:
+   45       * @return bool
+   46       */
+   47:     public function authenticate(Swift_Transport_SmtpAgent $agent, $email, $token)
+   48      {
+   49          try {
+
+/Users/miyens/Development/juander/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Authenticator.php:
+   32       * @return bool
+   33       */
+   34:     public function authenticate(Swift_Transport_SmtpAgent $agent, $username, $password);
+   35  }
+   36  
+
+20 matches across 18 files
+
+
+Searching 5969 files for "public function auth()"
+
+/Users/miyens/Development/juander/vendor/laravel/framework/src/Illuminate/Routing/Router.php:
+  992       * @return void
+  993       */
+  994:     public function auth()
+  995      {
+  996          // Authentication Routes...
+
+1 match in 1 file
